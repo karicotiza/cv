@@ -1,0 +1,157 @@
+{
+    "name": "Danial Kurtumerov",
+    "date_of_birth": "21.07.2001",
+    "occupation": "Software Developer",
+    "contacts": {
+        "phone": "+998 99 904 85 69",
+        "email": "kur7umerovd@gmail.com",
+        "telegram": "t.me/karicotiza",
+        "github": "github.com/karicotiza",
+        "linkedin": "linkedin.com/in/karicotiza"
+    },
+    "skills": {
+        "Backend": [
+            "Python",
+            "Django",
+            "Django REST Framework",
+            "Redis",
+            "RabbitMQ",
+            "Celery",
+            "FastAPI",
+            "Sphinx"
+        ],
+        "Frontend": [
+            "TypeScript",
+            "Angular",
+            "Tailwind CSS",
+            "Streamlit"
+        ],
+        "Databases": [
+            "MariaDB",
+            "MySQL",
+            "SQLite",
+            "Neo4J"
+        ],
+        "API integrations": [
+            "REST API",
+            "JSON RPC",
+            "gRPC"
+        ],
+        "ML": [
+            "TensorFlow",
+            "Keras",
+            "PyTorch",
+            "ONNX",
+            "Scikit Learn",
+            "Pandas"
+        ],
+        "DevOps": [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "BitBucket",
+            "Docker",
+            "Jenkins",
+            "Nginx",
+            "MLFlow",
+            "OpenLDAP"
+        ]        
+    },
+    "work_experience": {
+        "UzInfoCom": {
+            "start": "02.2024",
+            "end": "Today",
+            "location": "Tashkent, Uzbekistan",
+            "position": "Software Developer",
+            "description": [
+                "Development of a system for speech recognition (ASR) and text-based audio generation (TTS):",
+                "- development of high-load microservices;",
+                "- development of algorithms for correcting grammatical errors."
+            ]
+        },
+        "SME": {
+            "start": "02.2023",
+            "end": "01.2024",
+            "location": "Minsk, Belarus",
+            "position": "Software Developer",
+            "description": [
+                "Development of a voice assistant to speed up office work:",
+                "- developed the entire server part of the project;",
+                "- participated in the development of the frontend part of the project;",
+                "- developed a system for testing speech recognition modules;",
+                "- developed formulas for evaluating the quality of speech recognition modules;",
+                "- developed an algorithm that minimizes the impact of speech defects on recognition quality;",
+                "- developed an algorithm for detecting multiple voice commands in a single recording;",
+                "- developed an algorithm for optimizing audio transmission in the system;",
+                "- performed a deploy of the entire system on the company's servers.",
+                " ",
+                "As a result, a minimally viable product was developed and a demo was recorded.",
+                " ",
+                "Development of information kiosks:",
+                "- developed the entire server and client side of the system;", 
+                "- conducted testing and deployment on the user's devices;",
+                "- developed the design;",
+                "- worked with clients.",
+                " ",
+                "As a result, three systems have been developed and sold:",
+                "- for the BELAZ History Museum (Zhodino, Belarus);",
+                "- for the Court of the Eurasian Economic Union (Minsk, Belarus);",
+                "- for the Museum of Local Lore (Bereza, Belarus).",
+                " ",
+                "DevOps:",
+                "- administered three servers with Ubuntu Server OS;",
+                "- collected and deployed Docker containers;",
+                "- wrote works for Jenkins;",
+                "- deployed and configured GitLab, OpenLDAP, Jira."
+            ]
+        },
+        "BSUIR": {
+            "start": "09.2022",
+            "end": "08.2023",
+            "location": "Minsk, Belarus",
+            "position": "Research Associate",
+            "description": [
+                "Research work:",
+                "- participated in grants for the development of innovative products;",
+                "- participated in accelerating the execution of algorithms on supercomputers;",
+                "- developed programs for internal use of the department.",
+                " ",
+                "Student education:",
+                "- python programming language;",
+                "- machine learning;",
+                "- big data processing technologies."
+            ]
+        },
+        "Line-Servis": {
+            "start": "08.2016",
+            "end": "07.2019",
+            "location": "Tashkent, Uzbekistan",
+            "position": "Technical Support",
+            "description": [
+                "Administration:",
+                "- computer assembly and maintenance;",
+                "- installation and configuration of LAN;"
+            ]
+        }
+    },
+    "education": {
+        "BSUIR": {
+            "started": "2021",
+            "finished": "2023",
+            "location": "Minsk, Belarus",
+            "specialization": "Artificial intelligence"
+        },
+        "TUIT": {
+            "started": "2019",
+            "finished": "2021",
+            "location": "Tashkent, Uzbekistan",
+            "specialization": "Artificial intelligence"
+        },
+        "MCCT": {
+            "started": "2016",
+            "finished": "2019",
+            "location": "Tashkent, Uzbekistan",
+            "specialization": "Software Developer"
+        }
+    }
+}

@@ -5,5 +5,5 @@ My CV
 
 Steps:
 
-1. cd src
+1. `cd src`
 2. `streamlit run main.py` 

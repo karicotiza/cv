@@ -41,7 +41,10 @@ class Views:
         self,
     ) -> None:
         columns: list[DeltaGenerator] = streamlit.columns(
-            [self.__left_column_width, self.__right_column_width]
+            [
+                self.__left_column_width,
+                self.__right_column_width
+            ]
         )
 
         left_column, right_column = columns
@@ -58,7 +61,8 @@ class Views:
 
         with right_column:
             with streamlit.container(border=True):
-                streamlit.image(str(self.__avatar))
+                avatar_uri: str = str(self.__avatar)
+                streamlit.image(avatar_uri)
 
     def __work_experience_view(
         self

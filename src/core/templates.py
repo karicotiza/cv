@@ -3,8 +3,16 @@ def headline(
     date_of_birth: str,
     occupation: str,
 ) -> str:
-    memory: list[str] = ['', name, date_of_birth, '', occupation]
-    template: str = f'``` {'\n'.join(memory)}'
+    memory: list[str] = [
+        '',
+        name,
+        date_of_birth,
+        '',
+        occupation,
+    ]
+
+    template: str = '```'
+    template = template + '\n'.join(memory)
 
     return template
 
@@ -22,7 +30,8 @@ def experience_title(
     memory.append(f'{start} - {end}')
     memory.append(location)
 
-    template: str = f'``` {'\n'.join(memory)}'
+    template: str = '```'
+    template = template + '\n'.join(memory)
 
     return template
 
@@ -35,7 +44,7 @@ def experience_description(
     for line in description:
         memory.append(line)
 
-    template: str = f'{'\n'.join(memory)}'
+    template: str = '\n'.join(memory)
 
     return template
 
@@ -64,6 +73,7 @@ def contacts(
     for key, value in contacts_dictionary.items():
         message.append(f'{key}: {value}')
 
-    template: str = f'``` {'\n'.join(message)}'
+    template: str = '```'
+    template = template + '\n'.join(message)
 
     return template

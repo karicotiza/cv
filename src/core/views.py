@@ -2,7 +2,7 @@ import streamlit
 
 from pathlib import Path
 from dataclasses import dataclass
-from core import controller, models
+from core import controller, models, templates
 from streamlit.delta_generator import DeltaGenerator
 
 
@@ -48,49 +48,37 @@ class Views:
 
         with left_column:
             with streamlit.container(border=True):
-                message: list[str] = [
-                    '',
+                template: str = templates.headline(
                     self.__data.name,
                     self.__data.date_of_birth,
-                    '',
-                    self.__data.occupation,
-                ]
-
-                template: str = f'``` {'\n'.join(message)}'
+                    self.__data.occupation
+                )
 
                 streamlit.markdown(template)
 
         with right_column:
             with streamlit.container(border=True):
-                streamlit.image(
-                    str(self.__avatar),
-                )
+                streamlit.image(str(self.__avatar))
 
     def __work_experience_view(
         self
     ) -> None:
         with streamlit.expander("Work Experience"):
             for key, value in self.__data.work_experience.items():
-                memory_for_head: list[str] = [
-                    '',
-                ]
+                title: str = templates.experience_title(
+                    key,
+                    value.position,
+                    value.start,
+                    value.end,
+                    value.location
+                )
 
-                memory_for_body: list[str] = [
-                    '',
-                ]
+                description: str = templates.experience_description(
+                    value.description
+                )
 
-                memory_for_head.append(f'{key}, {value.position}')
-                memory_for_head.append(f'{value.start} - {value.end}')
-                memory_for_head.append(value.location)
-
-                for line in value.description:
-                    memory_for_body.append(line)
-
-                head: str = f'``` {'\n'.join(memory_for_head)}'
-                body: str = f'{'\n'.join(memory_for_body)}'
-
-                streamlit.markdown(head)
-                streamlit.markdown(body)
+                streamlit.markdown(title)
+                streamlit.markdown(description)
 
     def __skills_view(
         self
@@ -99,44 +87,29 @@ class Views:
             for key, value in self.__data.skills.items():
                 streamlit.caption(key)
 
-                memory: list[str] = []
+                points: str = templates.skill_points(value)
 
-                for skill in value:
-                    message: str = f'```{skill}```'
-                    memory.append(message)
-
-                message = ' '.join(memory)
-
-                streamlit.markdown(message)
+                streamlit.markdown(points)
 
     def __education_view(
         self,
     ) -> None:
         with streamlit.expander("Education"):
             for key, value in self.__data.education.items():
-                memory: list[str] = [
-                    '',
-                ]
+                education: str = templates.experience_title(
+                    key,
+                    value.specialization,
+                    value.started,
+                    value.finished,
+                    value.location
+                )
 
-                memory.append(f'{key}, {value.specialization}')
-                memory.append(f'{value.started} - {value.finished}')
-                memory.append(value.location)
-
-                template: str = f'``` {'\n'.join(memory)}'
-
-                streamlit.markdown(template)
+                streamlit.markdown(education)
 
     def __contacts__view(
         self,
     ) -> None:
-        message: list[str] = [
-            '',
-        ]
-
-        for key, value in self.__data.contacts.items():
-            message.append(f'{key}: {value}')
-
-        template: str = f'``` {'\n'.join(message)}'
+        template: str = templates.contacts(self.__data.contacts)
 
         with streamlit.expander("Contacts"):
             streamlit.markdown(template)

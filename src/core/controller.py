@@ -28,22 +28,15 @@ class Controller:
         with open(self.__info, 'r', encoding='utf-8') as info:
             json_data: dict = json.load(info)
 
-            for key, value in json_data.get('work_experience', '').items():
-                json_data['work_experience'][key] = models.Job(
-                    start=value.get('start', ''),
-                    end=value.get('end', ''),
-                    location=value.get('location', ''),
-                    position=value.get('position', ''),
-                    description=value.get('description', '')
-                )
-
-            for key, value in json_data.get('education', '').items():
-                json_data['education'][key] = models.Education(
-                    started=value.get('started', ''),
-                    finished=value.get('finished', ''),
-                    location=value.get('location', ''),
-                    specialization=value.get('specialization', ''),
-                )
+            for field in ['work_experience', 'education']:
+                for key, value in json_data.get(field, '').items():
+                    json_data[field][key] = models.Experience(
+                        start=value.get('start', ''),
+                        end=value.get('end', ''),
+                        location=value.get('location', ''),
+                        position=value.get('position', ''),
+                        description=value.get('description', [''])
+                    )
 
             data: models.Data = models.Data(**json_data)
 

@@ -136,22 +136,22 @@
     },
     "education": {
         "BSUIR": {
-            "started": "2021",
-            "finished": "2023",
+            "start": "09.2021",
+            "end": "06.2023",
             "location": "Minsk, Belarus",
-            "specialization": "Artificial intelligence"
+            "position": "Artificial intelligence"
         },
         "TUIT": {
-            "started": "2019",
-            "finished": "2021",
+            "start": "09.2019",
+            "end": "06.2021",
             "location": "Tashkent, Uzbekistan",
-            "specialization": "Artificial intelligence"
+            "position": "Artificial intelligence"
         },
         "MCCT": {
-            "started": "2016",
-            "finished": "2019",
+            "start": "09.2016",
+            "end": "06.2019",
             "location": "Tashkent, Uzbekistan",
-            "specialization": "Software Developer"
+            "position": "Software Developer"
         }
     }
 }

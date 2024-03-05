@@ -2,20 +2,12 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Job:
+class Experience:
     start: str
     end: str
     location: str
     position: str
     description: list[str]
-
-
-@dataclass
-class Education:
-    started: str
-    finished: str
-    location: str
-    specialization: str
 
 
 @dataclass
@@ -30,8 +22,8 @@ class Data:
         str, list[str]
     ]
     work_experience: dict[
-        str, Job
+        str, Experience
     ]
     education: dict[
-        str, Education
+        str, Experience
     ]

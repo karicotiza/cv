@@ -98,10 +98,10 @@ class Views:
             for key, value in self.__data.education.items():
                 education: str = templates.experience_title(
                     key,
-                    value.specialization,
-                    value.started,
-                    value.finished,
-                    value.location
+                    value.position,
+                    value.start,
+                    value.end,
+                    value.location,
                 )
 
                 streamlit.markdown(education)
